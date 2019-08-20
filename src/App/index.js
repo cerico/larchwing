@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
-import styled from 'styled-components'
 import { connect } from 'react-redux'
 import Drawers from  'colour-drawers'
 
