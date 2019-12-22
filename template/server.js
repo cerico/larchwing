@@ -1,9 +1,9 @@
-var path = require('path');
+module.exports = (Port) => `var path = require('path');
 var express = require('express');
 
 var app = express();
 
-var port=25486
+var port=${Port}
 
 app.get('/bundle/bundle.js', function(req,res){
   res.sendFile(path.join(__dirname, 'dist', 'bundle', 'bundle.js'));
@@ -25,3 +25,4 @@ app.listen(port, 'localhost', function(err) {
 
   console.log('Listening at ' + port);
 });
+`

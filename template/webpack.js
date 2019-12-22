@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+module.exports = (Port) => `const merge = require('webpack-merge');
 const baseConfig = require('./base.config.js');
 var path = require('path');
 
@@ -10,7 +10,7 @@ module.exports = merge(baseConfig(), {
     },
     devtool: 'source-map',
     devServer: {
-       port: 28613,
+       port: ${Port},
        host: '0.0.0.0',
       disableHostCheck: true,
        historyApiFallback: {
@@ -21,4 +21,4 @@ module.exports = merge(baseConfig(), {
        },
     }
   })
-
+`
